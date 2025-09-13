@@ -15,16 +15,15 @@
   width: 100%;
 }
 
-
 .row{
   display:flex;
   flex-wrap: wrap;
-  background:greenyellow;
+  background:rgb(166, 20, 219);
   
 }
 
 .grid{
-  background:greenyellow;
+  background:rgb(166, 20, 219);
 }
 .grid *,
 .flex .row * {
@@ -70,47 +69,98 @@
   flex: 0 0 calc((100% / 12) * 1);
 }
 
-
-
 /*Completar*/
 @media screen and (min-width: 768px){
-  .grid .columns-12 {
-    grid-column: span 12; 
+  .grid .columns-1 {
+    grid-column: span 4; 
   }
-  .grid .columns-11 {
-    grid-column: span 11;
+  .grid .columns-2 {
+    grid-column: span 4;
   }
-  .grid  .columns-10 {
-    grid-column: span 10;
+  .grid  .columns-3 {
+    grid-column: span 4;
   }
-  .grid  .columns-9 {
-    grid-column: span 9;
+  .grid  .columns-4 {
+    grid-column: span 12;
+  }
+  .grid  .columns-5 {
+    grid-column: span 12;
+  }
+  .grid  .columns-6 {
+    grid-column: span 2;
+    height: 80px;
+  }
+  .grid .columns-7 {
+    grid-column: span 7;
+    height: 120px;
   }
   .grid  .columns-8 {
-    grid-column: span 8;
+    grid-column: span 3;
+    height: 80px;
   }
-  .grid  .columns-7 {
-    grid-column: span 7;
+}
+
+/*Completar*/
+@media screen and (min-width: 1280px){
+  .grid div{
+  align-self: start;
   }
-  .grid .columns-6 {
+  .grid .columns-1 {
+    grid-column: span 3; 
+  }
+  .grid .columns-2 {
+    grid-column: span 3;
+  }
+  .grid  .columns-3 {
+    grid-column: span 6;
+  }
+  .grid  .columns-4 {
     grid-column: span 6;
   }
   .grid  .columns-5 {
-    grid-column: span 5;
+    grid-column: span 6;
   }
-  .grid .columns-4 {
+  .grid  .columns-6 {
+    grid-column: span 8;
+  }
+  .grid .columns-7 {
     grid-column: span 4;
   }
-  .grid .columns-3 {
-    grid-column: span 3;
+  .grid  .columns-8 {
+    grid-column: span 12;
   }
-  .grid .columns-2 {
-    grid-column: span 2;
-  }
-  .grid .columns-1 {
-    grid-column: span 1;
-  } 
 }
+
 .grid * {
   grid-column: span 12;
+  grid-auto-rows: min-content;
+}
+
+.grid .columns-1, .grid .columns-2, .grid .columns-3 {
+  background-color: blue;
+  height: 50px;
+}
+
+.grid .columns-4, .grid .columns-5 {
+  background-color: rgb(35, 206, 146);
+  height: 50px;
+}
+
+.grid .columns-6 {
+  background-color: red;
+  height: 100px;
+}
+
+.grid .columns-7 {
+  background-color: pink;
+  height: 100px;
+}
+
+.grid .columns-8 {
+  background-color: yellow;
+  height: 50px;
+}
+
+.grid div{
+  align-self: start;
 }
